@@ -4,7 +4,7 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 
 export const db = firebase
-    .initializeApp({ projectId: 'FIREBASE_PROJECT_ID' })
+    .initializeApp({ projectId: 'mr-store-da0b5' })
     .firestore()
 
 
