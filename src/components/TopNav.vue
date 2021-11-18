@@ -13,12 +13,14 @@
 
       <v-toolbar-items class="hidden-xs-only">
         <v-btn to="/" text> Inicio </v-btn>
-        <v-btn to="/" text> Estadisticas </v-btn>
         <v-btn to="/" text>
-          <v-icon right>mdi-plus</v-icon>
+        <v-icon left>mdi-chart-bar</v-icon>Estadisticas          
         </v-btn>
         <v-btn to="/" text>
-          <v-icon right>mdi-cart</v-icon>
+          <v-icon >mdi-plus</v-icon>
+        </v-btn>
+        <v-btn to="/" text>
+          <v-icon>mdi-cart</v-icon>
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
@@ -26,7 +28,7 @@
       <v-list >
         <v-list-item v-for="item in items" :key="item.title" link>
           <v-list-item-icon>
-            <v-icon>mdi-{{ item.icon}}</v-icon>
+            <v-icon>mdi-{{item.icon}}</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -37,13 +39,13 @@
   </div>
 </template>
 <script>
-module.exports = {
+ export default {
   data() {
     return {
       drawer: false,
       items: [
-          { title: "Home", link: "/", icon: "home" },
-          { title: "Estadisticas", link: "/", icon: "#" },
+          { title: "Home", link: "../src/views/Store.vue", icon: "home" },
+          { title: "Estadisticas", link: "/", icon: "chart-bar" },
           { title: "Nuevo", link: "/", icon: "plus" },
           { title: "Carrito", link: "/", icon: "cart" }
       
