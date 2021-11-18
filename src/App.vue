@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <TopNav />
+    
     <v-content>
       <v-container>
     <v-row>
@@ -18,15 +19,16 @@
 
 <script>
 import TopNav from './components/TopNav.vue'
-import Sidebar from './components/home/Sidebar.vue'
-import Product from './components/home/Products.vue'
+import Sidebar from './components/Sidebar.vue'
+import Product from './components/Products.vue'
+
 
 export default {
   name: 'App',
   components: {
     TopNav,
     Sidebar,
-    Product
+    Product,
   },
 
   data: () => ({

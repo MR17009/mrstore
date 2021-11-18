@@ -4,13 +4,16 @@
       <v-toolbar-titlte>
         <v-icon>mdi-store</v-icon>Cellphone Store</v-toolbar-titlte
       >
-
+      
       <v-spacer></v-spacer>
 
       <span class="hidden-sm-and-up">
         <v-btn @click.stop="drawer = !drawer"><v-icon>mdi-menu</v-icon></v-btn>
       </span>
-
+      <v-toolbar-items>
+        <v-icon>mdi-magnify</v-icon>
+        <input @filtarAnuncios="filtrarAnuncios" v-in:keyup.enter>
+      </v-toolbar-items>
       <v-toolbar-items class="hidden-xs-only">
         <v-btn to="/" text> Inicio </v-btn>
         <v-btn to="/" text>
@@ -39,10 +42,13 @@
   </div>
 </template>
 <script>
+import Buscar from './Buscar.vue' 
  export default {
+  components: { },
   data() {
     return {
       drawer: false,
+      Buscar,
       items: [
           { title: "Home", link: "../src/views/Store.vue", icon: "home" },
           { title: "Estadisticas", link: "/", icon: "chart-bar" },
