@@ -1,3 +1,6 @@
 <template>
-    <div></div>
+    <div>produc</div>
 </template>
+<script>
+
+</script>

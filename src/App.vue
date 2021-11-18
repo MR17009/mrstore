@@ -2,18 +2,31 @@
   <v-app>
     <TopNav />
     <v-content>
-      <router-view></router-view>
+      <v-container>
+    <v-row>
+      <v-col sm="3" offset-lg="1" v-if="$vuetify.breakpoint.smAndUp">
+        <Sidebar />
+      </v-col>
+      <v-col sm="9" lg="7">
+        <Product />
+      </v-col>
+    </v-row>
+  </v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
 import TopNav from './components/TopNav.vue'
+import Sidebar from './components/home/Sidebar.vue'
+import Product from './components/home/Products.vue'
 
 export default {
   name: 'App',
   components: {
-    TopNav
+    TopNav,
+    Sidebar,
+    Product
   },
 
   data: () => ({
