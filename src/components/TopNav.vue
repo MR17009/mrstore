@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar>
+    <v-app-bar color="red darken-4" dark >
       <v-toolbar-titlte>
         <v-icon>mdi-store</v-icon>Cellphone Store</v-toolbar-titlte
       >
