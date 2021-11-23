@@ -1,12 +1,12 @@
 <template>
   <v-sheet>
-    <v-card>
+    <v-card color="red darken-1" dark>
       <v-card-title>Marca</v-card-title>
-      <v-card-text>
+      <v-card-text >
         <v-container fluid>
           <v-switch
             :label="'Nuevo'"
-            color="red darken-3"
+            color="white"
             v-model="switch1"
             inset
           ></v-switch>
@@ -15,13 +15,10 @@
             :key="i"
             :label="brand"
             :value="i"
-            color="red darken-3"
             @change="emitirFiltros"
           ></v-checkbox>
         </v-container>
       </v-card-text>
-    </v-card>
-    <v-card>
       <v-card-title>Sistema</v-card-title>
       <v-card-text>
         <v-container fluid>
@@ -30,13 +27,10 @@
             :key="i"
             :label="osi"
             :value="i"
-            color="red darken-3"
             @change="emitirFiltros"
           ></v-checkbox>
         </v-container>
       </v-card-text>
-    </v-card>
-    <v-card>
       <v-card-title>Pantalla</v-card-title>
       <v-card-text>
         <v-container fluid>
@@ -45,7 +39,6 @@
             :key="i"
             :label="screen"
             :value="i"
-            color="red darken-3"
             @change="emitirFiltros"
           ></v-checkbox>
         </v-container>

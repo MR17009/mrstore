@@ -1,16 +1,23 @@
 <template>
   <div>
-    <v-app-bar color="red darken-4" dark >
-      <v-toolbar-titlte>
-        <v-icon>mdi-store</v-icon>Cellphone Store</v-toolbar-titlte
+    <v-app-bar color="red darken-3" dark>
+      <v-toolbar-title class="hidden-sm-and-down">
+        <v-icon>mdi-store</v-icon>Cellphone Store</v-toolbar-title
       >
-
-      <v-spacer></v-spacer>
-
-      <span class="hidden-sm-and-up">
-        <v-btn @click.stop="drawer = !drawer"><v-icon>mdi-menu</v-icon></v-btn>
+      <span class="hidden-md-and-up">
+        <v-btn @click.stop="drawer = !drawer" color="red darken-3"><v-icon>mdi-menu</v-icon></v-btn>
       </span>
-      <v-toolbar-items class="hidden-xs-only">
+      <v-spacer class="hidden-sm-and-up"></v-spacer>
+
+      <v-text-field
+        label="Search"
+        v-model="cadena"
+        solo-inverted
+        hide-details
+        class="pl-10 pr-10 ml-4"
+        @keyup.capture="buscar"
+      ></v-text-field> 
+      <v-toolbar-items class="hidden-sm-and-down" >
         <v-btn to="/" text> Inicio </v-btn>
         <v-btn to="/" text>
           <v-icon left>mdi-chart-bar</v-icon>Estadisticas
@@ -43,6 +50,7 @@ export default {
   components: {},
   data() {
     return {
+      cadena: "",
       drawer: false,
       Buscar,
       items: [

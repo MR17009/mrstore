@@ -5,10 +5,10 @@
     <v-content>
       <v-container>
     <v-row>
-      <v-col sm="3" lg="2" v-if="$vuetify.breakpoint.mdAndUp">
+      <v-col sm="4" lg="3" v-if="$vuetify.breakpoint.mdAndUp">
         <Sidebar />
       </v-col>
-      <v-col sm="9" lg="10">
+      <v-col sm="8" lg="9">
         <Product />
       </v-col>
     </v-row>
